@@ -9,6 +9,7 @@ import Mission from './pages/Mission';
 import Experience from './pages/Experience';
 import Audience from './pages/Audience';
 import Mentors from './pages/Mentors';
+import Courses from './pages/Courses';
 import './App.css';
 
 function App() {
@@ -57,6 +58,7 @@ function App() {
           <Route path="/experience" element={<Experience />} />
           <Route path="/audience" element={<Audience />} />
           <Route path="/mentors" element={<Mentors />} />
+          <Route path="/courses" element={<Courses />} />
           <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>
       </div>
