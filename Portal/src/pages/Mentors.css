@@ -1,0 +1,139 @@
+/* Mentors Page */
+@import url('./Home.css');
+
+.mentors-page {
+  background: radial-gradient(circle at 90% 10%, rgba(59, 130, 246, 0.08), transparent 14%),
+    linear-gradient(180deg, #040812 0%, #0b172c 100%);
+}
+
+.mentor-card strong {
+  margin: 1rem 0 0 0 !important;
+}
+
+.mentor-card span {
+  margin-bottom: 2.5rem;
+}
+
+.mentor-avatar {
+  margin-bottom: 1rem;
+}
+
+.mentor-avatar img {
+  object-fit: cover;
+  border-radius: 24px;
+  width: 100%;
+  height: 100% !important;
+  display: block;
+}
+
+.mentor-avatar::after {
+  display: none;
+}
+
+/* .mentors-page .mentor-card {
+  min-height: 240px;
+  justify-content: flex-start;
+} */
+
+.mentor-card p {
+  color: rgba(255, 255, 255, 0.72);
+  margin-top: 0.5rem;
+  line-height: 1.6;
+}
+
+/* Carousel Styles */
+.carousel-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  margin: 0 4rem;
+}
+
+.carousel-container {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  gap: 1.5rem;
+  padding: 2rem 4rem;
+  scroll-behavior: smooth;
+}
+
+.carousel-container::-webkit-scrollbar {
+  display: none;
+}
+
+.mentors-carousel-grid {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  gap: 1.5rem;
+}
+
+.mentors-carousel-grid .mentor-card {
+  flex: 0 0 270px;
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+}
+
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  z-index: 10;
+}
+
+.carousel-btn:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateY(-50%) scale(1.1);
+}
+
+.carousel-btn-left {
+  left: 0;
+}
+
+.carousel-btn-right {
+  right: 0;
+}
+
+@media (max-width: 768px) {
+  .mentor-card {
+    flex: 0 0 280px;
+  }
+  
+  .carousel-container {
+    padding: 1rem 2rem;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .mentor-card {
+    flex: 0 0 280px;
+  }
+}
+
+@media (min-width: 1025px) {
+  .mentor-card {
+    flex: 0 0 320px;
+  }
+}
+
+/* Ensure smooth scrolling polyfill for older browsers */
+.carousel-container {
+  -webkit-overflow-scrolling: touch;
+}
+

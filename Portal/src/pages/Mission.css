@@ -1,0 +1,9 @@
+/* Mission Page */
+@import url('./Home.css');
+
+.mission-page {
+  background: radial-gradient(circle at top left, rgba(59, 130, 246, 0.12), transparent 18%),
+    radial-gradient(circle at 90% 10%, rgba(59, 130, 246, 0.08), transparent 14%),
+    linear-gradient(180deg, #040812 0%, #0b172c 100%);
+}
+

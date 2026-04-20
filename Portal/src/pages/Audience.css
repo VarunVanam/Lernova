@@ -1,0 +1,7 @@
+/* Audience Page */
+@import url('./Home.css');
+
+.audience-page {
+  background: linear-gradient(180deg, #040812 0%, #0b172c 100%);
+}
+

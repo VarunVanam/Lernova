@@ -32,6 +32,15 @@
   letter-spacing: 0.18em;
   font-size: 0.95rem;
   color: var(--white);
+  text-decoration: none;
+}
+
+.nav-logo:hover {
+  color: var(--white);
+  text-shadow: 
+    0 0 20px rgba(59, 130, 246, 0.8),
+    0 0 30px rgba(59, 130, 246, 0.6),
+    0 0 40px rgba(59, 130, 246, 0.4);
 }
 
 .nav-links {
