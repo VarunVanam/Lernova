@@ -293,7 +293,10 @@
   border: 1px solid rgba(59, 130, 246, 0.2);
   display: grid;
   place-items: center;
-  background: rgba(255, 255, 255, 0.015);
+  background-image: url('/Learn.jpeg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
 }
 
 .experience-card-center {
