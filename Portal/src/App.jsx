@@ -1,5 +1,7 @@
 import { useEffect } from 'react';
 import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
+import { useLoading } from './contexts/LoadingContext';
+import AppLoader from './components/AppLoader';
 import Navbar from './components/Navbar';
 import Home from './pages/Home';
 import Login from './pages/Login';
@@ -10,6 +12,18 @@ import Mentors from './pages/Mentors';
 import './App.css';
 
 function App() {
+  const { isLoading, setIsLoading } = useLoading();
+
+  // Hide loader after 2 seconds (simulate initial load)
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setIsLoading(false);
+    }, 2000);
+
+    return () => clearTimeout(timer);
+  }, [setIsLoading]);
+
+  // Existing anchor scroll useEffect
   useEffect(() => {
     const anchorLinks = Array.from(document.querySelectorAll('a[href^="#"]'));
 
@@ -27,6 +41,10 @@ function App() {
     anchorLinks.forEach((anchor) => anchor.addEventListener('click', handleAnchorClick));
     return () => anchorLinks.forEach((anchor) => anchor.removeEventListener('click', handleAnchorClick));
   }, []);
+
+  if (isLoading) {
+    return <AppLoader />;
+  }
 
   return (
     <BrowserRouter>
