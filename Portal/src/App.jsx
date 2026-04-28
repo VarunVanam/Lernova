@@ -1,5 +1,5 @@
 import { useEffect } from 'react';
-import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, Navigate, useLocation } from 'react-router-dom';
 import { useLoading } from './contexts/LoadingContext';
 import AppLoader from './components/AppLoader';
 import Navbar from './components/Navbar';
@@ -10,12 +10,34 @@ import Experience from './pages/Experience';
 import Audience from './pages/Audience';
 import Mentors from './pages/Mentors';
 import Courses from './pages/Courses';
+import LandingPage from './pages/LandingPage';
 import './App.css';
+
+function AppRoutes() {
+  const location = useLocation();
+  const hideNavbar = location.pathname === '/landingpage';
+
+  return (
+    <div className="app">
+      {!hideNavbar && <Navbar />}
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/mission" element={<Mission />} />
+        <Route path="/experience" element={<Experience />} />
+        <Route path="/audience" element={<Audience />} />
+        <Route path="/mentors" element={<Mentors />} />
+        <Route path="/courses" element={<Courses />} />
+        <Route path="/landingpage" element={<LandingPage />} />
+        <Route path="*" element={<Navigate to="/" replace />} />
+      </Routes>
+    </div>
+  );
+}
 
 function App() {
   const { isLoading, setIsLoading } = useLoading();
 
-  // Hide loader after 2 seconds (simulate initial load)
   useEffect(() => {
     const timer = setTimeout(() => {
       setIsLoading(false);
@@ -24,7 +46,6 @@ function App() {
     return () => clearTimeout(timer);
   }, [setIsLoading]);
 
-  // Existing anchor scroll useEffect
   useEffect(() => {
     const anchorLinks = Array.from(document.querySelectorAll('a[href^="#"]'));
 
@@ -49,19 +70,7 @@ function App() {
 
   return (
     <BrowserRouter>
-      <div className="app">
-        <Navbar />
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/login" element={<Login />} />
-          <Route path="/mission" element={<Mission />} />
-          <Route path="/experience" element={<Experience />} />
-          <Route path="/audience" element={<Audience />} />
-          <Route path="/mentors" element={<Mentors />} />
-          <Route path="/courses" element={<Courses />} />
-          <Route path="*" element={<Navigate to="/" replace />} />
-        </Routes>
-      </div>
+      <AppRoutes />
     </BrowserRouter>
   );
 }
