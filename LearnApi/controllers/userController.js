@@ -124,14 +124,14 @@ const subscribeNewsletter = async (req, res) => {
         const mailOptions = {
           from: process.env.EMAIL_USER,
           to: email,
-          subject: 'Welcome to Learnova! 🎉',
+          subject: 'Welcome to Tattvalearn! 🎉',
           html: `
             <h1>Hello ${name}!</h1>
-            <p>Thank you for subscribing to Learnova Newsletter!</p>
+            <p>Thank you for subscribing to Tattvalearn Newsletter!</p>
             <p>Stay ignited with the latest on transforming learning into impact.</p>
-            <p>Best,<br>The Learnova Team</p>
+            <p>Best,<br>The Tattvalearn Team</p>
             <hr>
-            <p><small>You received this because you subscribed at learnova.com</small></p>
+            <p><small>You received this because you subscribed at Tattvalearn.com</small></p>
           `
         };
 
@@ -144,7 +144,7 @@ const subscribeNewsletter = async (req, res) => {
       console.warn('Skipping welcome email because transporter is not configured.');
     }
 
-    res.status(200).json({ message: 'Thank you for subscribing to Learnova!' });
+    res.status(200).json({ message: 'Thank you for subscribing to Tattvalearn!' });
   } catch (error) {
     console.error('subscribeNewsletter error:', error.message);
     res.status(500).json({ message: 'Internal server error' });

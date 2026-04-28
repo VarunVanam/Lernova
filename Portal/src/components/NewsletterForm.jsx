@@ -16,7 +16,7 @@ const NewsletterForm = () => {
     setLoading(true);
     try {
       await API.post('/users/newsletter', form);
-      setMessage('Thank you for joining the Learnova waitlist!');
+      setMessage('Thank you for joining the Tattvalearn waitlist!');
       setForm({ name: '', email: '', path: '' });
     } catch (error) {
       setMessage(error.response?.data?.message || 'Subscription failed. Please try again.');

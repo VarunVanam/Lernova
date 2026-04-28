@@ -8,7 +8,7 @@ function Login() {
     <main className="login-page">
       <section className="hero">
         <div className="login-card">
-          <img src="/Learn.jpeg" alt="Learnova" className="login-logo" />
+          <img src="/Learn.jpeg" alt="Tattvalearn" className="login-logo" />
           <div className="toggle-group">
             <button 
               type="button" 
@@ -28,7 +28,7 @@ function Login() {
 <div className="login-title">{isRegister ? 'Create your account' : 'Sign in to your account'}</div>
           <p className="hero-description">
             {isRegister 
-              ? 'Start your Learnova journey today with the right role.' 
+              ? 'Start your Tattvalearn journey today with the right role.' 
               : 'Access your personalized learning dashboard.'
             }
           </p>

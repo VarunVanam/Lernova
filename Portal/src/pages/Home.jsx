@@ -37,7 +37,7 @@ function Home() {
 
       <footer className="site-footer">
         <div className="footer-top">
-          <div className="footer-brand">LEARNOVA</div>
+          <div className="footer-brand">Tattvalearn</div>
           <nav className="footer-nav">
             <NavLink to="/mission">About Us</NavLink>
             <NavLink to="/experience">Experience</NavLink>
@@ -47,7 +47,7 @@ function Home() {
         </div>
         <div className="footer-copy">
           <span>Every Mind. One Movement.</span>
-          <small>&copy; 2026 Learnova. All rights reserved.</small>
+          <small>&copy; 2026 Tattvalearn. All rights reserved.</small>
         </div>
       </footer>
     </main>

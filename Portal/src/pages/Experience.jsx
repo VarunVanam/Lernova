@@ -9,7 +9,7 @@ function Experience() {
             <span className="section-eyebrow">The Experience</span>
             <h2>Charged. Purposeful. Electric.</h2>
             <p>
-              Every session, every masterclass, and every interaction on Learnova is designed to spark new ideas.
+              Every session, every masterclass, and every interaction on Tattvalearn is designed to spark new ideas.
               The atmosphere is dense with ambition. You aren't just absorbing content; you're participating in a movement of minds.
             </p>
             <ul className="experience-list">
