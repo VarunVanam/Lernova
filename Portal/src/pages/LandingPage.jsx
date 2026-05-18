@@ -59,7 +59,7 @@ function LandingPage() {
           <div className="lp-why-right">
             <div className="lp-why-big-stat"><div className="lp-why-big-num">~50%</div><div className="lp-why-big-label">of Indian graduates face employability challenges despite holding degrees from recognized institutions</div></div>
             <div className="lp-why-diff">
-              <div className="lp-why-diff-title">THE TATTVALEARN DIFFERENCE</div>
+              <div className="lp-why-diff-title">THE TattvaLearn DIFFERENCE</div>
               <ul>
                 <li>We simulate real corporate environments - not classrooms</li>
                 <li>Every student gets a personal feedback scorecard</li>

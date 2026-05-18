@@ -2,7 +2,6 @@
 @import url('./Home.css');
 
 .experience-page {
-  background: radial-gradient(circle at top left, rgba(59, 130, 246, 0.12), transparent 18%),
-    linear-gradient(180deg, #040812 0%, #0b172c 100%);
+  background: radial-gradient(circle at top left, rgba(107, 170, 117, 0.12), transparent 18%),
+    var(--page-gradient-main);
 }
-

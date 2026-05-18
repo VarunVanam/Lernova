@@ -8,7 +8,7 @@ function Mission() {
           <span className="hero-badge">Our Mission</span>
           <h1>Transform <span>Learning</span> into Action.</h1>
           <p className="hero-description">
-            Tattvalearn is the premium platform uniting hungry students, ambitious professionals, and wise academicians.
+            TattvaLearn is the premium platform uniting hungry students, ambitious professionals, and wise academicians.
             We create a charged space designed to elevate your trajectory through immersive experiences and high-signal connections.
           </p>
           <div className="hero-actions">
